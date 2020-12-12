@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist
   attr_accessor :name
   attr_reader :songs
@@ -20,23 +22,17 @@ class Artist
     @@artists
   end
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 08ecfeee503391ac7178aa132191e2d640f6c62e
   def add_song(song)
     @songs << song
-    song.artist = self unless song.artist
+    song.artist = self
   end
 
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
 
-<<<<<<< HEAD
-=======
   # def to_param
   #   name.downcase.gsub(' ', '-')
   # end
->>>>>>> 08ecfeee503391ac7178aa132191e2d640f6c62e
 end
